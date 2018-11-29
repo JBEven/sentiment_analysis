@@ -4,16 +4,10 @@ from googletrans import Translator
 import pandas as pd
 
 def translation(batch):
-    
+    """customer your personal file path """
     file = "/Users/leli/iAdvize/data/training.1600000.processed.noemoticon_translated.csv"
-    df = pd.read_csv(file, sep = ",", usecols = ['target', 'id', 'date', 'flag', 'user', 'text', 'translated'] )
+    df = pd.read_csv(file, sep = ",", usecols = ['target', 'id', 'date', 'flag', 'user', 'text', 'translated'], encoding = 'latin-1')
     
-    #df = pd.read_csv(file, sep = ",", encoding = 'latin-1')
-    #df['translated'] = ''
-    #df.columns = ['target', 'id', 'date', 'flag', 'user', 'text', 'translated']
-    #df.to_csv("/Users/leli/Downloads/training.1600000.processed.noemoticon_translated.csv",  sep = ',')
-    
-    #batch = 10
     bg = df.iloc[:, -1].last_valid_index() + 1
     
     
@@ -43,7 +37,7 @@ def translation(batch):
     
 batch = sys.argv[1]
 
-translation(batch)
+translation(batch) ## translatate batch size english tweets to french.
 
 
 
