@@ -3,10 +3,12 @@ General objective: Sentiment analysis is to determine the overall contextual pol
 
 This repository aims to fulfilling this task. It contains mainly four parts including data, preprocessing, train and test. 
 
-1, data: 1,600,000 tweets from sentiment140 dataset. To make it compatible with french, googletrans module in python has been used to translate them into french. Due to limit of such API, the french translation data is not exhaustive.
+1, data: 1,600,000 tweets from sentiment140 dataset. To make it compatible with french, googletrans module in python has been used to translate them into french. Due to the volume limit of googletrans API, the french translation of data is not exhaustive. translation_to_fr.py is set to finish this purpose. 
 
 2, preprocessing: aims to eliminate the noisy (unformal expression) in tweets by using regular expression.
 
 3, train: selecting the best classification model from candidate models including Random Forest, Support Vector Machine, Bernoulli Naive Bayesian. The optimal values for hyperparameters are calibrated by RandomizedSearchCV model in sklean. The key idea of it is to use 5-Fold cross validation to obtain optimal combination of hyperparameters values. 
 
 4, test: yielding accuracy comparison between models and an existing pattern module in python.
+
+5, model: the best model.
