@@ -5,9 +5,9 @@ This repository aims to fulfilling this task. It contains mainly four parts incl
 
 1, data: 1,600,000 tweets from sentiment140 dataset. To make it compatible with french, googletrans module in python has been used to translate them into french. Due to the volume limit of googletrans API, the french translation of the data has not been done exhaustively. It currently contains about 75,000 translated tweets. The function translation_to_fr.py is developped to fulfill the translation from english to french.  
 
-2, preprocessing: aims to eliminate the noisy (unformal expression) in tweets by using regular expression.
+2, preprocessing: aims to eliminating the noisy (unformal expression etc) in tweets by using regular expression.
 
-3, train: selecting the best classification model from candidate models including Random Forest, Support Vector Machine, Bernoulli Naive Bayesian. The optimal values for hyperparameters are calibrated by RandomizedSearchCV model in sklean. The key idea of it is to use 5-Fold cross validation to obtain optimal combination of hyperparameters values. 
+3, train: selecting the best classification model from candidate set including Random Forest, Support Vector Machine, Naive Bayesian (Bernoulli and Multinomial), via different vectorization methods such as bag-of-words, frequency, tf-idf and neural embedding. The optimal values for hyperparameters are calibrated by RandomizedSearchCV model in sklean. The key idea of it is to use 5-Fold cross validation to obtain optimal combination of hyperparameters values. 
 
 4, test: yielding accuracy comparison between models and an existing pattern module in python.
 
