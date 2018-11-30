@@ -3,7 +3,7 @@ General objective: Sentiment analysis is to determine the overall contextual pol
 
 This repository aims to fulfilling this task. It contains mainly four parts including data, preprocessing, train and test. 
 
-1, data: 1,600,000 tweets from sentiment140 dataset. To make it compatible with french, googletrans module in python has been used to translate them into french. Due to the volume limit of googletrans API, the french translation of the data has not been done exhaustively. It currently contains about 75,000 translated tweets. The function translation_to_fr.py is developped to fulfill the translation from english to french. To obtain more tweet data, one can use the  
+1, data: 1,600,000 tweets from sentiment140 dataset. To make it compatible with french, googletrans module in python has been used to translate them into french. Due to the volume limit of googletrans API, the french translation of the data has not been done exhaustively. It currently contains about 75,000 translated tweets. The function translation_to_fr.py is developped to fulfill the translation from english to french. In addition, one can use in addition tweet API to obtain more tweet megadata, as presented in RestAPI.py.   
 
 2, preprocessing: aims to eliminating the noisy (unformal expression etc) in tweets by using regular expression.
 
@@ -13,6 +13,18 @@ This repository aims to fulfilling this task. It contains mainly four parts incl
 
 5, model: the best model.
 
+
+The following table shows the accurary of predictions with different classification methods and vectorizations:
+|vectorization|occurence|frequency|tf-idf|fasttext|
+---------------------------------------------------
+|Bernoulli NB||||||
+---------------------------------------------------
+|Multinomial NB||||||
+---------------------------------------------------
+|SVM||||||
+---------------------------------------------------
+|RF||||||
+---------------------------------------------------
 
 
 
