@@ -17,9 +17,9 @@ This repository aims to fulfilling this task. It contains mainly four parts incl
 The following table shows the accurary of predictions with different classification methods and vectorizations:
 |vectorization|occurence|frequency|tf-idf|fasttext|
 ---------------------------------------------------
-|Bernoulli NB||||||
+|Bernoulli NB|0.746|NA|NA|NA|NA|
 ---------------------------------------------------
-|Multinomial NB||||||
+|Multinomial NB|NA|0.751|NA|NA|NA|
 ---------------------------------------------------
 |SVM||||||
 ---------------------------------------------------
